@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.api.imobiliaria.model.Imovel;
 import br.com.api.imobiliaria.repository.ImovelRepository;
+import br.com.api.imobiliaria.repository.filter.ImovelFilter;
 
 @Service
 public class ImovelService {
@@ -36,5 +37,10 @@ public class ImovelService {
 	public Page<Imovel> buscaCom(Pageable pageable) {
 		return this.imovelRepository.findAll(pageable);
 	}
-	
+
+
+    @Transactional(readOnly = true)
+    public Page<Imovel> busca(ImovelFilter filtro, Pageable page) {
+        return imovelRepository.filtrar(filtro, page);
+    }
 }

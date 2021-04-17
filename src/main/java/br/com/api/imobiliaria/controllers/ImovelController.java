@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import br.com.api.imobiliaria.model.Imovel;
-
+import br.com.api.imobiliaria.repository.filter.ImovelFilter;
 import br.com.api.imobiliaria.service.ImovelService;
 
 @RestController
@@ -40,7 +40,12 @@ public class ImovelController {
 	@Autowired
 	public ImovelController(ImovelService imovelService) {
 		this.imovelService = imovelService;
-	}
+	} 
+	@GetMapping("/pesquisa")
+    public Page<Imovel> buscaFiltrada(ImovelFilter filtro, Pageable page  ) {
+        return imovelService.busca(filtro, page );
+
+   }
 	@GetMapping
 	public Page<Imovel>listar(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 2)
 	Pageable pageable){
