@@ -7,6 +7,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -47,6 +48,7 @@ public class ImovelController {
 
    }
 	@GetMapping
+	@CacheEvict(value = "listaDeAlugueis", allEntries = true)
 	public Page<Imovel>listar(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 2)
 	Pageable pageable){
 		return this.imovelService.buscaCom(pageable);
