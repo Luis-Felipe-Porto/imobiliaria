@@ -5,13 +5,11 @@ Back-end desenvolvido para o sistema de imobiliária do projeto do IFMA Monte Ca
 
 # Projeto
 
-API construida para o modulo de gestão de gerenciamento de selos do estacionamento do ifma monte castelo **Instituto Federal de Educação, Ciência e Tecnologia do Maranhão**, [IFMA](https://montecastelo.ifma.edu.br "Site do IFMA"),com o uso da métodologia agil XP.
+API REST construida para o modulo de gestão de imóveis destinado ao projeto de imobiliaria de Linguagem de programação web **Instituto Federal de Educação, Ciência e Tecnologia do Maranhão**, [IFMA](https://montecastelo.ifma.edu.br "Site do IFMA"),com boas práticas REST.
 
-A API consiste em uma seleção de cadastro pendentes, onde os dados de cadastro podem ser solicitados por servidor, aluno ou tercerizado, e depois são analisados por um colaborador da prefeitura do campus, que faz um deferimento ou indeferimento baseados nestes dados,essa análise é feita devido integridade de verificar que os condutores possuem vínculo com o IFMA pra realizar o estacionamento de seus veiculo no campus.
+A API consiste em uma realização de alugéis, onde os imóveis podem ser cadastrados, pesquisados pelos clientes, o sistema realiza o aluguel a um inquilino ou a venda do imóvel.
 ## DOC HTTP
 ![HTTP 1](https://github.com/Luis-Felipe-Porto/Luis-Felipe-Porto/blob/master/assets/doc%20API.JPG)
-## RELEASES NA METODOLOGIA XP
-![HTTP 1](https://github.com/Luis-Felipe-Porto/Luis-Felipe-Porto/blob/master/assets/Realeses.JPG)
 
 # Tecnologias utilizadas
 ## Back end
